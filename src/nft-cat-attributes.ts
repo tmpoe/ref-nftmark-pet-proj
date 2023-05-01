@@ -27,9 +27,7 @@ export function handleNftCatAttributesCreated(event: NftCatAttributesCreatedEven
     entity.save()
 }
 
-export async function handleNftCatAttributesRequested(
-    event: NftCatAttributesRequestedEvent
-): void {
+export function handleNftCatAttributesRequested(event: NftCatAttributesRequestedEvent): void {
     let entity = new NftCatAttributesRequested(
         event.transaction.hash.concatI32(event.logIndex.toI32())
     )

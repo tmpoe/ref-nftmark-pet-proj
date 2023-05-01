@@ -27,7 +27,7 @@ dataSources:
                 handler: handleNftCatAttributesRequested
               - event: OwnershipTransferred(indexed address,indexed address)
                 handler: handleOwnershipTransferred
-          file: ../src/nft-cat-attributes.ts
+          file: ./src/nft-cat-attributes.ts
     - kind: ethereum
       name: NftMarketplace
       network: mainnet
