@@ -147,5 +147,5 @@ function getIdFromEventParams(tokenId: BigInt, nftAddress: Address): string {
 }
 
 function getIdFromEventParamsAsBytes(tokenId: BigInt, nftAddress: Address): Bytes {
-    return new Bytes(<i32>parseInt(getIdFromEventParams(tokenId, nftAddress), 16))
+    return new Bytes(parseInt(tokenId.toHexString() + nftAddress.toHexString(), 16))
 }
