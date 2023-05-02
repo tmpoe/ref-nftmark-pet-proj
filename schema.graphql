@@ -1,98 +1,98 @@
 type NftCatAttributesCreated @entity(immutable: true) {
-    id: ID!
-    requestId: BigInt! # uint256
-    requester: Bytes! # address
-    breed: Int! # uint8
-    eyecolor: Int! # uint8
-    playfulness: BigInt! # uint256
-    cuteness: BigInt! # uint256
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  requestId: BigInt! # uint256
+  requester: Bytes! # address
+  breed: Int! # uint8
+  eyecolor: Int! # uint8
+  playfulness: BigInt! # uint256
+  cuteness: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type NftCatAttributesRequested @entity(immutable: true) {
-    id: ID!
-    requestId: BigInt! # uint256
-    requester: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  requestId: BigInt! # uint256
+  requester: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type OwnershipTransferred @entity(immutable: true) {
-    id: ID!
-    previousOwner: Bytes! # address
-    newOwner: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 type NftListed @entity(immutable: true) {
-    id: ID!
-    nftId: BigInt! # uint256
-    owner: Bytes! # address
-    price: BigInt! # uint256
-    ierc721TokenAddress: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  nftId: BigInt! # uint256
+  owner: Bytes! # address
+  price: BigInt! # uint256
+  ierc721TokenAddress: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type NftListingCancelled @entity(immutable: true) {
-    id: ID!
-    nftId: BigInt! # uint256
-    owner: Bytes! # address
-    ierc721TokenAddress: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  nftId: BigInt! # uint256
+  owner: Bytes! # address
+  ierc721TokenAddress: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type NftListingUpdated @entity(immutable: true) {
-    id: ID!
-    nftId: BigInt! # uint256
-    owner: Bytes! # address
-    price: BigInt! # uint256
-    ierc721TokenAddress: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  nftId: BigInt! # uint256
+  owner: Bytes! # address
+  price: BigInt! # uint256
+  ierc721TokenAddress: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type NftMinted @entity(immutable: true) {
-    id: ID!
-    owner: Bytes! # address
-    tokenId: BigInt! # uint256
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  owner: Bytes! # address
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type NftRequested @entity(immutable: true) {
-    id: ID!
-    requester: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  requester: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type NftSold @entity(immutable: true) {
-    id: ID!
-    owner: Bytes! # address
-    nftId: BigInt! # uint256
-    ierc721TokenAddress: Bytes! # address
-    price: BigInt! # uint256
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  owner: Bytes! # address
+  nftId: BigInt! # uint256
+  ierc721TokenAddress: Bytes! # address
+  price: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 type NftMarketplaceOwnershipTransferred @entity(immutable: true) {
-    id: ID!
-    previousOwner: Bytes! # address
-    newOwner: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
 }
