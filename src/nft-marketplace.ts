@@ -6,18 +6,18 @@ import {
     NftMinted as NftMintedEvent,
     NftRequested as NftRequestedEvent,
     NftSold as NftSoldEvent,
-    NftMarketplaceOwnershipTransferred as NftMarketplaceOwnershipTransferredEvent,
+    OwnershipTransferred as OwnershipTransferredEvent,
 } from "../generated/NftMarketplace/NftMarketplace"
 import {
-    NftListed,
     ActiveListing,
+    NftListed,
     NftListingCancelled,
     NftListingUpdated,
     NftMinted,
     NftRequested,
     NftSold,
-    NftMarketplaceOwnershipTransferred,
     OwnedNft,
+    OwnershipTransferred,
 } from "../generated/schema"
 
 export function handleNftListed(event: NftListedEvent): void {
@@ -63,17 +63,11 @@ export function handleNftListingCancelled(event: NftListingCancelledEvent): void
     entity.blockTimestamp = event.block.timestamp
     entity.transactionHash = event.transaction.hash
 
-    let activeListing = ActiveListing.load(
-        getIdFromEventParams(event.params.nftId, event.params.ierc721TokenAddress)
-    )
-    activeListing!.buyer = event.params.owner
     entity.save()
-    activeListing!.save()
 }
 
 export function handleNftListingUpdated(event: NftListingUpdatedEvent): void {
     let entity = new NftListingUpdated(event.transaction.hash.concatI32(event.logIndex.toI32()))
-
     entity.nftId = event.params.nftId
     entity.owner = event.params.owner
     entity.price = event.params.price
@@ -143,12 +137,8 @@ export function handleNftSold(event: NftSoldEvent): void {
     ownedNft!.save()
 }
 
-export function handleNftMarketplaceOwnershipTransferred(
-    event: NftMarketplaceOwnershipTransferredEvent
-): void {
-    let entity = new NftMarketplaceOwnershipTransferred(
-        event.transaction.hash.concatI32(event.logIndex.toI32())
-    )
+export function handleOwnershipTransferred(event: OwnershipTransferredEvent): void {
+    let entity = new OwnershipTransferred(event.transaction.hash.concatI32(event.logIndex.toI32()))
     entity.previousOwner = event.params.previousOwner
     entity.newOwner = event.params.newOwner
 

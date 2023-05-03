@@ -170,16 +170,16 @@ export class NftSold__Params {
   }
 }
 
-export class NftMarketplaceOwnershipTransferred extends ethereum.Event {
-  get params(): NftMarketplaceOwnershipTransferred__Params {
-    return new NftMarketplaceOwnershipTransferred__Params(this);
+export class OwnershipTransferred extends ethereum.Event {
+  get params(): OwnershipTransferred__Params {
+    return new OwnershipTransferred__Params(this);
   }
 }
 
-export class NftMarketplaceOwnershipTransferred__Params {
-  _event: NftMarketplaceOwnershipTransferred;
+export class OwnershipTransferred__Params {
+  _event: OwnershipTransferred;
 
-  constructor(event: NftMarketplaceOwnershipTransferred) {
+  constructor(event: OwnershipTransferred) {
     this._event = event;
   }
 

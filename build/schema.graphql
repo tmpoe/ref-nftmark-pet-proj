@@ -1,33 +1,21 @@
-type NftCatAttributesCreated @entity(immutable: true) {
-    id: Bytes!
-    requestId: BigInt! # uint256
-    requester: Bytes! # address
-    breed: Int! # uint8
-    eyecolor: Int! # uint8
-    playfulness: BigInt! # uint256
-    cuteness: BigInt! # uint256
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
+type ActiveListing @entity {
+    id: ID!
+    buyer: Bytes! # address
+    owner: Bytes! # address
+    ierc721TokenAddress: Bytes! # address
+    nftId: BigInt!
+    price: BigInt
     transactionHash: Bytes!
 }
 
-type NftCatAttributesRequested @entity(immutable: true) {
-    id: Bytes!
-    requestId: BigInt! # uint256
-    requester: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
+type OwnedNft @entity {
+    id: ID!
+    owner: Bytes! # address
+    ierc721TokenAddress: Bytes! # address
+    nftId: BigInt!
     transactionHash: Bytes!
 }
 
-type OwnershipTransferred @entity(immutable: true) {
-    id: Bytes!
-    previousOwner: Bytes! # address
-    newOwner: Bytes! # address
-    blockNumber: BigInt!
-    blockTimestamp: BigInt!
-    transactionHash: Bytes!
-}
 type NftListed @entity(immutable: true) {
     id: Bytes!
     nftId: BigInt! # uint256
@@ -36,16 +24,6 @@ type NftListed @entity(immutable: true) {
     ierc721TokenAddress: Bytes! # address
     blockNumber: BigInt!
     blockTimestamp: BigInt!
-    transactionHash: Bytes!
-}
-
-type ActiveListing @entity {
-    id: ID!
-    buyer: Bytes! # address
-    owner: Bytes! # address
-    ierc721TokenAddress: Bytes! # address
-    nftId: BigInt!
-    price: BigInt
     transactionHash: Bytes!
 }
 
@@ -74,6 +52,7 @@ type NftMinted @entity(immutable: true) {
     id: Bytes!
     owner: Bytes! # address
     tokenId: BigInt! # uint256
+    ierc721TokenAddress: Bytes! # address
     blockNumber: BigInt!
     blockTimestamp: BigInt!
     transactionHash: Bytes!
@@ -98,7 +77,37 @@ type NftSold @entity(immutable: true) {
     transactionHash: Bytes!
 }
 
-type NftMarketplaceOwnershipTransferred @entity(immutable: true) {
+type OwnershipTransferred @entity(immutable: true) {
+    id: Bytes!
+    previousOwner: Bytes! # address
+    newOwner: Bytes! # address
+    blockNumber: BigInt!
+    blockTimestamp: BigInt!
+    transactionHash: Bytes!
+}
+type NftCatAttributesCreated @entity(immutable: true) {
+    id: Bytes!
+    requestId: BigInt! # uint256
+    requester: Bytes! # address
+    breed: Int! # uint8
+    eyecolor: Int! # uint8
+    playfulness: BigInt! # uint256
+    cuteness: BigInt! # uint256
+    blockNumber: BigInt!
+    blockTimestamp: BigInt!
+    transactionHash: Bytes!
+}
+
+type NftCatAttributesRequested @entity(immutable: true) {
+    id: Bytes!
+    requestId: BigInt! # uint256
+    requester: Bytes! # address
+    blockNumber: BigInt!
+    blockTimestamp: BigInt!
+    transactionHash: Bytes!
+}
+
+type NftCatAttributesOwnershipTransferred @entity(immutable: true) {
     id: Bytes!
     previousOwner: Bytes! # address
     newOwner: Bytes! # address

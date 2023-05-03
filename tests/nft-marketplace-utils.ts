@@ -7,7 +7,7 @@ import {
   NftMinted,
   NftRequested,
   NftSold,
-  NftMarketplaceOwnershipTransferred
+  OwnershipTransferred
 } from "../generated/NftMarketplace/NftMarketplace"
 
 export function createNftListedEvent(
@@ -95,7 +95,8 @@ export function createNftListingUpdatedEvent(
 
 export function createNftMintedEvent(
   owner: Address,
-  tokenId: BigInt
+  tokenId: BigInt,
+  ierc721TokenAddress: Address
 ): NftMinted {
   let nftMintedEvent = changetype<NftMinted>(newMockEvent())
 
@@ -108,6 +109,12 @@ export function createNftMintedEvent(
     new ethereum.EventParam(
       "tokenId",
       ethereum.Value.fromUnsignedBigInt(tokenId)
+    )
+  )
+  nftMintedEvent.parameters.push(
+    new ethereum.EventParam(
+      "ierc721TokenAddress",
+      ethereum.Value.fromAddress(ierc721TokenAddress)
     )
   )
 
@@ -155,25 +162,25 @@ export function createNftSoldEvent(
   return nftSoldEvent
 }
 
-export function createNftMarketplaceOwnershipTransferredEvent(
+export function createOwnershipTransferredEvent(
   previousOwner: Address,
   newOwner: Address
-): NftMarketplaceOwnershipTransferred {
-  let nftMarketplaceOwnershipTransferredEvent = changetype<
-    NftMarketplaceOwnershipTransferred
-  >(newMockEvent())
+): OwnershipTransferred {
+  let ownershipTransferredEvent = changetype<OwnershipTransferred>(
+    newMockEvent()
+  )
 
-  nftMarketplaceOwnershipTransferredEvent.parameters = new Array()
+  ownershipTransferredEvent.parameters = new Array()
 
-  nftMarketplaceOwnershipTransferredEvent.parameters.push(
+  ownershipTransferredEvent.parameters.push(
     new ethereum.EventParam(
       "previousOwner",
       ethereum.Value.fromAddress(previousOwner)
     )
   )
-  nftMarketplaceOwnershipTransferredEvent.parameters.push(
+  ownershipTransferredEvent.parameters.push(
     new ethereum.EventParam("newOwner", ethereum.Value.fromAddress(newOwner))
   )
 
-  return nftMarketplaceOwnershipTransferredEvent
+  return ownershipTransferredEvent
 }
