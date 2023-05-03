@@ -49,14 +49,6 @@ type ActiveListing @entity {
     transactionHash: Bytes!
 }
 
-type OwnedNft @entity {
-    id: ID!
-    owner: Bytes! # address
-    ierc721TokenAddress: Bytes! # address
-    nftId: BigInt!
-    transactionHash: Bytes!
-}
-
 type NftListingCancelled @entity(immutable: true) {
     id: Bytes!
     nftId: BigInt! # uint256
@@ -82,7 +74,6 @@ type NftMinted @entity(immutable: true) {
     id: Bytes!
     owner: Bytes! # address
     tokenId: BigInt! # uint256
-    ierc721TokenAddress: Bytes! # address
     blockNumber: BigInt!
     blockTimestamp: BigInt!
     transactionHash: Bytes!
