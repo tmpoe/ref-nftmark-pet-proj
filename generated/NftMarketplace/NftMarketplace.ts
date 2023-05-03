@@ -116,6 +116,10 @@ export class NftMinted__Params {
   get tokenId(): BigInt {
     return this._event.parameters[1].value.toBigInt();
   }
+
+  get ierc721TokenAddress(): Address {
+    return this._event.parameters[2].value.toAddress();
+  }
 }
 
 export class NftRequested extends ethereum.Event {

@@ -56,7 +56,7 @@ dataSources:
                 handler: handleNftListingCancelled
               - event: NftListingUpdated(uint256,address,uint256,address)
                 handler: handleNftListingUpdated
-              - event: NftMinted(address,uint256)
+              - event: NftMinted(address,uint256,address)
                 handler: handleNftMinted
               - event: NftRequested(address)
                 handler: handleNftRequested
