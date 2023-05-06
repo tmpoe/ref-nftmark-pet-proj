@@ -29,7 +29,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -45,7 +45,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -94,7 +94,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -125,7 +125,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -150,7 +150,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -225,7 +225,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -267,7 +267,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -285,7 +285,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -323,7 +323,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -416,7 +416,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {

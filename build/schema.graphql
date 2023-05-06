@@ -3,7 +3,7 @@ type ActiveListing @entity {
     buyer: Bytes! # address
     owner: Bytes! # address
     ierc721TokenAddress: Bytes! # address
-    nftId: BigInt!
+    tokenId: BigInt!
     price: BigInt
     transactionHash: Bytes!
 }
@@ -12,13 +12,13 @@ type OwnedNft @entity {
     id: ID!
     owner: Bytes! # address
     ierc721TokenAddress: Bytes! # address
-    nftId: BigInt!
+    tokenId: BigInt!
     transactionHash: Bytes!
 }
 
 type NftListed @entity(immutable: true) {
     id: Bytes!
-    nftId: BigInt! # uint256
+    tokenId: BigInt! # uint256
     owner: Bytes! # address
     price: BigInt! # uint256
     ierc721TokenAddress: Bytes! # address
@@ -29,7 +29,7 @@ type NftListed @entity(immutable: true) {
 
 type NftListingCancelled @entity(immutable: true) {
     id: Bytes!
-    nftId: BigInt! # uint256
+    tokenId: BigInt! # uint256
     owner: Bytes! # address
     ierc721TokenAddress: Bytes! # address
     blockNumber: BigInt!
@@ -39,7 +39,7 @@ type NftListingCancelled @entity(immutable: true) {
 
 type NftListingUpdated @entity(immutable: true) {
     id: Bytes!
-    nftId: BigInt! # uint256
+    tokenId: BigInt! # uint256
     owner: Bytes! # address
     price: BigInt! # uint256
     ierc721TokenAddress: Bytes! # address
@@ -69,7 +69,7 @@ type NftRequested @entity(immutable: true) {
 type NftSold @entity(immutable: true) {
     id: Bytes!
     owner: Bytes! # address
-    nftId: BigInt! # uint256
+    tokenId: BigInt! # uint256
     ierc721TokenAddress: Bytes! # address
     price: BigInt! # uint256
     blockNumber: BigInt!

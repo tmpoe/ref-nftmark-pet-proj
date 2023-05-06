@@ -1,13 +1,13 @@
 {
-  "name": "reffos",
+  "name": "ref-nftmark-pet-proj",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ reffos",
-    "create-local": "graph create --node http://localhost:8020/ reffos",
-    "remove-local": "graph remove --node http://localhost:8020/ reffos",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 reffos",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ ref-nftmark-pet-proj",
+    "create-local": "graph create --node http://localhost:8020/ ref-nftmark-pet-proj",
+    "remove-local": "graph remove --node http://localhost:8020/ ref-nftmark-pet-proj",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ref-nftmark-pet-proj",
     "test": "graph test"
   },
   "dependencies": {
