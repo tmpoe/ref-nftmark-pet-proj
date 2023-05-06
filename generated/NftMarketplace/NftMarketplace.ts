@@ -23,7 +23,7 @@ export class NftListed__Params {
     this._event = event;
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._event.parameters[0].value.toBigInt();
   }
 
@@ -53,7 +53,7 @@ export class NftListingCancelled__Params {
     this._event = event;
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._event.parameters[0].value.toBigInt();
   }
 
@@ -79,7 +79,7 @@ export class NftListingUpdated__Params {
     this._event = event;
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._event.parameters[0].value.toBigInt();
   }
 
@@ -157,7 +157,7 @@ export class NftSold__Params {
     return this._event.parameters[0].value.toAddress();
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._event.parameters[1].value.toBigInt();
   }
 
@@ -306,7 +306,7 @@ export class BuyNftCall__Inputs {
     this._call = call;
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._call.inputValues[0].value.toBigInt();
   }
 
@@ -340,7 +340,7 @@ export class CancelListingCall__Inputs {
     this._call = call;
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._call.inputValues[0].value.toBigInt();
   }
 
@@ -400,7 +400,7 @@ export class ListNftCall__Inputs {
     this._call = call;
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._call.inputValues[0].value.toBigInt();
   }
 
@@ -528,7 +528,7 @@ export class UpdateListingCall__Inputs {
     this._call = call;
   }
 
-  get nftId(): BigInt {
+  get tokenId(): BigInt {
     return this._call.inputValues[0].value.toBigInt();
   }
 

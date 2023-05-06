@@ -11,7 +11,7 @@ import {
 } from "../generated/NftMarketplace/NftMarketplace"
 
 export function createNftListedEvent(
-  nftId: BigInt,
+  tokenId: BigInt,
   owner: Address,
   price: BigInt,
   ierc721TokenAddress: Address
@@ -21,7 +21,10 @@ export function createNftListedEvent(
   nftListedEvent.parameters = new Array()
 
   nftListedEvent.parameters.push(
-    new ethereum.EventParam("nftId", ethereum.Value.fromUnsignedBigInt(nftId))
+    new ethereum.EventParam(
+      "tokenId",
+      ethereum.Value.fromUnsignedBigInt(tokenId)
+    )
   )
   nftListedEvent.parameters.push(
     new ethereum.EventParam("owner", ethereum.Value.fromAddress(owner))
@@ -40,7 +43,7 @@ export function createNftListedEvent(
 }
 
 export function createNftListingCancelledEvent(
-  nftId: BigInt,
+  tokenId: BigInt,
   owner: Address,
   ierc721TokenAddress: Address
 ): NftListingCancelled {
@@ -49,7 +52,10 @@ export function createNftListingCancelledEvent(
   nftListingCancelledEvent.parameters = new Array()
 
   nftListingCancelledEvent.parameters.push(
-    new ethereum.EventParam("nftId", ethereum.Value.fromUnsignedBigInt(nftId))
+    new ethereum.EventParam(
+      "tokenId",
+      ethereum.Value.fromUnsignedBigInt(tokenId)
+    )
   )
   nftListingCancelledEvent.parameters.push(
     new ethereum.EventParam("owner", ethereum.Value.fromAddress(owner))
@@ -65,7 +71,7 @@ export function createNftListingCancelledEvent(
 }
 
 export function createNftListingUpdatedEvent(
-  nftId: BigInt,
+  tokenId: BigInt,
   owner: Address,
   price: BigInt,
   ierc721TokenAddress: Address
@@ -75,7 +81,10 @@ export function createNftListingUpdatedEvent(
   nftListingUpdatedEvent.parameters = new Array()
 
   nftListingUpdatedEvent.parameters.push(
-    new ethereum.EventParam("nftId", ethereum.Value.fromUnsignedBigInt(nftId))
+    new ethereum.EventParam(
+      "tokenId",
+      ethereum.Value.fromUnsignedBigInt(tokenId)
+    )
   )
   nftListingUpdatedEvent.parameters.push(
     new ethereum.EventParam("owner", ethereum.Value.fromAddress(owner))
@@ -135,7 +144,7 @@ export function createNftRequestedEvent(requester: Address): NftRequested {
 
 export function createNftSoldEvent(
   owner: Address,
-  nftId: BigInt,
+  tokenId: BigInt,
   ierc721TokenAddress: Address,
   price: BigInt
 ): NftSold {
@@ -147,7 +156,10 @@ export function createNftSoldEvent(
     new ethereum.EventParam("owner", ethereum.Value.fromAddress(owner))
   )
   nftSoldEvent.parameters.push(
-    new ethereum.EventParam("nftId", ethereum.Value.fromUnsignedBigInt(nftId))
+    new ethereum.EventParam(
+      "tokenId",
+      ethereum.Value.fromUnsignedBigInt(tokenId)
+    )
   )
   nftSoldEvent.parameters.push(
     new ethereum.EventParam(

@@ -19,7 +19,7 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "nftId", "type": "uint256" },
+      { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
       { "internalType": "address", "name": "nftAddress", "type": "address" }
     ],
     "name": "NftMarketplace__ItemAlreadyListed",
@@ -27,7 +27,7 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "nftId", "type": "uint256" },
+      { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
       { "internalType": "address", "name": "nftAddress", "type": "address" }
     ],
     "name": "NftMarketplace__ItemNotListed",
@@ -60,7 +60,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -91,7 +91,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -116,7 +116,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -191,7 +191,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "nftId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
@@ -231,7 +231,7 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "nftId", "type": "uint256" },
+      { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
       {
         "internalType": "address",
         "name": "ierc721TokenAddress",
@@ -245,7 +245,7 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "nftId", "type": "uint256" },
+      { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
       {
         "internalType": "address",
         "name": "ierc721TokenAddress",
@@ -273,7 +273,7 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "nftId", "type": "uint256" },
+      { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
       {
         "internalType": "address",
         "name": "ierc721TokenAddress",
@@ -328,7 +328,7 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "nftId", "type": "uint256" },
+      { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
       {
         "internalType": "address",
         "name": "ierc721TokenAddress",

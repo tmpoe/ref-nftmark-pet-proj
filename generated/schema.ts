@@ -85,8 +85,8 @@ export class ActiveListing extends Entity {
     this.set("ierc721TokenAddress", Value.fromBytes(value));
   }
 
-  get nftId(): BigInt {
-    let value = this.get("nftId");
+  get tokenId(): BigInt {
+    let value = this.get("tokenId");
     if (!value || value.kind == ValueKind.NULL) {
       throw new Error("Cannot return null for a required field.");
     } else {
@@ -94,8 +94,8 @@ export class ActiveListing extends Entity {
     }
   }
 
-  set nftId(value: BigInt) {
-    this.set("nftId", Value.fromBigInt(value));
+  set tokenId(value: BigInt) {
+    this.set("tokenId", Value.fromBigInt(value));
   }
 
   get price(): BigInt | null {
@@ -190,8 +190,8 @@ export class OwnedNft extends Entity {
     this.set("ierc721TokenAddress", Value.fromBytes(value));
   }
 
-  get nftId(): BigInt {
-    let value = this.get("nftId");
+  get tokenId(): BigInt {
+    let value = this.get("tokenId");
     if (!value || value.kind == ValueKind.NULL) {
       throw new Error("Cannot return null for a required field.");
     } else {
@@ -199,8 +199,8 @@ export class OwnedNft extends Entity {
     }
   }
 
-  set nftId(value: BigInt) {
-    this.set("nftId", Value.fromBigInt(value));
+  set tokenId(value: BigInt) {
+    this.set("tokenId", Value.fromBigInt(value));
   }
 
   get transactionHash(): Bytes {
@@ -254,8 +254,8 @@ export class NftListed extends Entity {
     this.set("id", Value.fromBytes(value));
   }
 
-  get nftId(): BigInt {
-    let value = this.get("nftId");
+  get tokenId(): BigInt {
+    let value = this.get("tokenId");
     if (!value || value.kind == ValueKind.NULL) {
       throw new Error("Cannot return null for a required field.");
     } else {
@@ -263,8 +263,8 @@ export class NftListed extends Entity {
     }
   }
 
-  set nftId(value: BigInt) {
-    this.set("nftId", Value.fromBigInt(value));
+  set tokenId(value: BigInt) {
+    this.set("tokenId", Value.fromBigInt(value));
   }
 
   get owner(): Bytes {
@@ -383,8 +383,8 @@ export class NftListingCancelled extends Entity {
     this.set("id", Value.fromBytes(value));
   }
 
-  get nftId(): BigInt {
-    let value = this.get("nftId");
+  get tokenId(): BigInt {
+    let value = this.get("tokenId");
     if (!value || value.kind == ValueKind.NULL) {
       throw new Error("Cannot return null for a required field.");
     } else {
@@ -392,8 +392,8 @@ export class NftListingCancelled extends Entity {
     }
   }
 
-  set nftId(value: BigInt) {
-    this.set("nftId", Value.fromBigInt(value));
+  set tokenId(value: BigInt) {
+    this.set("tokenId", Value.fromBigInt(value));
   }
 
   get owner(): Bytes {
@@ -499,8 +499,8 @@ export class NftListingUpdated extends Entity {
     this.set("id", Value.fromBytes(value));
   }
 
-  get nftId(): BigInt {
-    let value = this.get("nftId");
+  get tokenId(): BigInt {
+    let value = this.get("tokenId");
     if (!value || value.kind == ValueKind.NULL) {
       throw new Error("Cannot return null for a required field.");
     } else {
@@ -508,8 +508,8 @@ export class NftListingUpdated extends Entity {
     }
   }
 
-  set nftId(value: BigInt) {
-    this.set("nftId", Value.fromBigInt(value));
+  set tokenId(value: BigInt) {
+    this.set("tokenId", Value.fromBigInt(value));
   }
 
   get owner(): Bytes {
@@ -845,8 +845,8 @@ export class NftSold extends Entity {
     this.set("owner", Value.fromBytes(value));
   }
 
-  get nftId(): BigInt {
-    let value = this.get("nftId");
+  get tokenId(): BigInt {
+    let value = this.get("tokenId");
     if (!value || value.kind == ValueKind.NULL) {
       throw new Error("Cannot return null for a required field.");
     } else {
@@ -854,8 +854,8 @@ export class NftSold extends Entity {
     }
   }
 
-  set nftId(value: BigInt) {
-    this.set("nftId", Value.fromBigInt(value));
+  set tokenId(value: BigInt) {
+    this.set("tokenId", Value.fromBigInt(value));
   }
 
   get ierc721TokenAddress(): Bytes {

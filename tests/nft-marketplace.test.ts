@@ -17,14 +17,14 @@ import { createNftListedEvent } from "./nft-marketplace-utils"
 
 describe("Describe entity assertions", () => {
   beforeAll(() => {
-    let nftId = BigInt.fromI32(234)
+    let tokenId = BigInt.fromI32(234)
     let owner = Address.fromString("0x0000000000000000000000000000000000000001")
     let price = BigInt.fromI32(234)
     let ierc721TokenAddress = Address.fromString(
       "0x0000000000000000000000000000000000000001"
     )
     let newNftListedEvent = createNftListedEvent(
-      nftId,
+      tokenId,
       owner,
       price,
       ierc721TokenAddress
@@ -46,7 +46,7 @@ describe("Describe entity assertions", () => {
     assert.fieldEquals(
       "NftListed",
       "0xa16081f360e3847006db660bae1c6d1b2e17ec2a-1",
-      "nftId",
+      "tokenId",
       "234"
     )
     assert.fieldEquals(
